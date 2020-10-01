@@ -86,7 +86,11 @@
             	<a href="perfil.php"><img src="../imagenes/boton_usuario.png" width="75%"/></a> 
             </div> 
             <div style="color:#039"; font-size: 5vw;"> 
-                <?php echo $nombreUsuario; 	?>
+                <?php 
+                  if (isset($nombreUsuario)) {
+                    echo $nombreUsuario;
+                  }
+                ?>
             </div>   
             <div class="opcionMenu" >
 	          	<img src="../imagenes/barraVerticalEncabezado.png"  width="70%" />
@@ -103,7 +107,7 @@
   	<!-- InstanceBeginEditable name="EditRegion3" -->
     
      	
-          <div class="contentidoIzquierda" align="right">            	
+          <div class="contentidoIzquierda" align="center">            	
           	<img src="../imagenes/promoConEncabezado.png" width="60%" />
             <br>
             <div class="recuadroGrisDos">
@@ -118,7 +122,9 @@
               <div class="recuadroBlanco">
               		<img src="../imagenes/texto_1.png" width="50%"  />
               </div>                
-              <br />		
+              <br />
+              <center><a class="btn btn-small btn-success" style="color:#ffffff" href="https://api.whatsapp.com/send?phone=+51902030519&text=Hola%20quiero%20informaci%C3%B3n" target="_blank">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;"></i></a></center>
+              <br>
               <div class="recuadroBlanco">
               		<img src="../imagenes/premios-bienvenida.png" width="70%"  />
               </div>                   

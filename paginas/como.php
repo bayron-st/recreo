@@ -87,7 +87,11 @@
             	<a href="perfil.php"><img src="../imagenes/boton_usuario.png" width="75%"/></a> 
             </div> 
             <div style="color:#039"; font-size: 5vw;">
-                <?php echo $nombreUsuario; 	?>
+                <?php 
+                  if (isset($nombreUsuario)) {
+                    echo $nombreUsuario;
+                  }
+                ?>
             </div>   
             <div class="opcionMenu" >
 	          	<img src="../imagenes/barraVerticalEncabezado.png"  width="70%" />
@@ -104,13 +108,14 @@
     
     
      	
-          <div class="contentidoIzquierda" align="right">            	
+          <div class="contentidoIzquierda" align="center">            	
           	<img src="../imagenes/texto_1_como.png" width="80%" />
             <br>
-            <div class="recuadroAzulDos" align="right">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube-nocookie.com/embed/0zrb-0BhrWU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+            <div class="recuadroAzulDos" align="center">
+              <br>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/0zrb-0BhrWU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <br>
+              <center><a class="btn btn-small btn-success" style="color:#ffffff; margin-top: 20px;" href="https://api.whatsapp.com/send?phone=+51902030519&text=Hola%20quiero%20informaci%C3%B3n" target="_blank">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;"></i></a></center>
             </div>
           </div>  
           <div class="contentidoDerecha">   

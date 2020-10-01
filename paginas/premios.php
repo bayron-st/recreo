@@ -125,7 +125,7 @@
                     <img src="../imagenes/texto_5_premios.png" width="100%" />
 										<!-- <img src="../imagenes/boton_premios_dos.png" width="100%" /> -->
                     <button type="button" class="btn btn-small disabled" disabled="disabled">REDIMIR <BR>PREMIOS</button>
-										<button type="button" class="btn btn-small disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+										<a class="btn btn-small btn-success" style="color:#ffffff" href="https://api.whatsapp.com/send?phone=+51902030519&text=Hola%20quiero%20informaci%C3%B3n" target="_blank">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;"></i></a>
 										<button type="button" class="btn btn-small disabled" disabled="disabled">GANAR CREDITOS <BR>ADICIONALES</button>
               </div>
               <div class="contentidoTercioDos">
@@ -134,7 +134,7 @@
                     <img src="../imagenes/texto_6_premios.png" width="100%" />
                   <!--  <img src="../imagenes/boton_premios_dos.png" width="100%" /> -->
 										<button type="button" class="btn btn-small btn-primary" onClick="mensaje2()">REDIMIR <BR>PREMIOS</button>
-										<button type="button" class="btn btn-small disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+                    <a class="btn btn-small btn-success" style="color:#ffffff" href="https://api.whatsapp.com/send?phone=+51902030519&text=Hola%20quiero%20informaci%C3%B3n" target="_blank">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;"></i></a>
 										<button type="button" class="btn btn-small disabled" disabled="disabled">GANAR CREDITOS <BR>ADICIONALES</button>
               </div>
               <div class="contentidoTercioTres">
@@ -143,7 +143,7 @@
                     <img src="../imagenes/texto_7_premios.png" width="100%" />
                     <!-- <img src="../imagenes/boton_premios_tres.png" width="100%" /> -->
 										<button type="button" class="btn btn-small btn-primary" onClick="mensaje()">REDIMIR <BR>PREMIOS</button>
-										<button type="button" class="btn btn-small disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+										<a class="btn btn-small btn-success" style="color:#ffffff" href="https://api.whatsapp.com/send?phone=+51902030519&text=Hola%20quiero%20informaci%C3%B3n" target="_blank">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;"></i></a>
 	  							  <button type="button" class="btn btn-small disabled" disabled="disabled">GANAR CREDITOS <BR>ADICIONALES</button>
 
 
