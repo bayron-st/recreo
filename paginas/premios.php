@@ -125,7 +125,13 @@
                     <img src="../imagenes/texto_3_premios.png" width="100%"  />
                     <img src="../imagenes/premios-netflix_spotify.jpg" width="100%" />
                     <img src="../imagenes/texto_6_premios.png" width="100%" />
-                    <img src="../imagenes/boton_premios_dos.png" width="100%" />
+                  <!--  <img src="../imagenes/boton_premios_dos.png" width="100%" /> -->
+
+										<button type="button" class="btn btn-small btn-primary" onClick="mensaje2()">REDIMIR <BR>PREMIOS</button>
+										<button type="button" class="btn btn-small btn-primary disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+										<button type="button" class="btn btn-small  btn-primary disabled" disabled>GANAR CREDITOS <BR>ADICIONALES</button>
+
+
               </div>
               <div class="contentidoTercioTres">
                     <img src="../imagenes/texto_4_premios.png" width="100%"  />
@@ -187,15 +193,30 @@ var aleatorio = getRChar() + getRChar() + Math.floor((Math.random() * 9999) * 4)
 
   swal.fire({
 
-		html:'<h3>JUEGOS PARA DISPOSITIVOS MOVILES </h3> <br> Gracias por redimir tu premio <br>'+
+		html:'<h3 style="color:blue">JUEGOS PARA DISPOSITIVOS MOVILES </h3> <br> Gracias por redimir tu premio <br>'+
     'Descarga la app con este link desde tu celular <br><br> ' +
-    '<center><a href="https://bit.ly/30jftBh"> https://bit.ly/30jftBh </a><br><br></center>'+
-		' Ingresa el siguiente PIN para elegir tu juego: <br> <br> <input class="form-control" type="text" placeholder="'+ aleatorio+ '" readonly> ',
+    '<center><a style="color:blue" href="https://bit.ly/30jftBh"> https://bit.ly/30jftBh </a><br><br>'+
+		' Ingresa el siguiente PIN para elegir tu juego: <br> <br> <label style="text-align:center; padding: 7px; background-color:blue; color: #ffffff !important; font-size: 20px; width: 100px; ">'+aleatorio+'</label> </center> ',
 		width: 700,
+		showConfirmButton: false,
+		showCancelButton: true,
+		cancelButtonText: "CERRAR",
 
   });
 }
 
+function mensaje2() {
+  swal.fire({
+
+		html:'<h3 style="color:blue">PINES DIGITALES - NETFLIX O SPOTIFY</h3> <br> Gracias por redimir tu premio <br><br>'+
+    'Descarga la app con este link desde tu celular',
+		width: 700,
+		showConfirmButton: false,
+		showCancelButton: true,
+		cancelButtonText: "CERRAR",
+
+  });
+}
 </script>
 
 
