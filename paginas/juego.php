@@ -217,9 +217,13 @@
       </div>
       <div class="recuadroGris">      	
           <div class="recuadroGrisIzquierda">
-          	<a href="http://elrecreoesdetodos.com" target="_blank"><img src="../imagenes/compraYRecibeDomicilio.png" width="50%" alt="domicilios" /></a>
-            	
-          </div>             
+          	<a href="https://rappi.app.link/AbCo1Li2N9" target="_blank"><img src="../imagenes/compraYRecibeDomicilio.png" width="90%" alt="domicilios" /></a>
+            <br>
+            <p style="font-size:14px">Políticas de privacidad:</p>
+            <a href="https://www.tetrapak.com/co/about/legal-information" style="color:#033F88; padding-right:5px" target="_blank">Colombia</a>
+            <a href="https://www.tetrapak.com/pe/about/legal-information" style="color:#033F88; padding-right:5px" target="_blank">Perú</a>
+            <a href="https://www.tetrapak.com/ec/about/legal-information" style="color:#033F88; padding-right:5px" target="_blank">Ecuador</a>
+          </div>            
           <div class="recuadroGrisDerecha">
           	<img src="../imagenes/siguenos.png"  />
             <a href="http://facebook.com/tetrapakcolombia" target="_blank"><img src="../imagenes/facebook.png"  /></a>

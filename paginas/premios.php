@@ -164,8 +164,12 @@
       </div>
       <div class="recuadroGris">
           <div class="recuadroGrisIzquierda">
-          	<a href="http://elrecreoesdetodos.com" target="_blank"><img src="../imagenes/compraYRecibeDomicilio.png" width="50%" alt="domicilios" /></a>
-
+          	<a href="https://rappi.app.link/AbCo1Li2N9" target="_blank"><img src="../imagenes/compraYRecibeDomicilio.png" width="90%" alt="domicilios" /></a>
+            <br>
+            <p style="font-size:14px">Políticas de privacidad:</p>
+            <a href="https://www.tetrapak.com/co/about/legal-information" style="color:#033F88; padding-right:5px" target="_blank">Colombia</a>
+            <a href="https://www.tetrapak.com/pe/about/legal-information" style="color:#033F88; padding-right:5px" target="_blank">Perú</a>
+            <a href="https://www.tetrapak.com/ec/about/legal-information" style="color:#033F88; padding-right:5px" target="_blank">Ecuador</a>
           </div>
           <div class="recuadroGrisDerecha">
           	<img src="../imagenes/siguenos.png"  />
@@ -196,7 +200,7 @@ var aleatorio = getRChar() + getRChar() + Math.floor((Math.random() * 9999) * 4)
 
   swal.fire({
 
-		html:'<h3 style="color:blue">JUEGOS PARA DISPOSITIVOS MOVILES </h3> <br> Gracias por redimir tu premio <br>'+
+		html:'<h3 style="color:blue">JUEGOS PARA DISPOSITIVOS MOVILES ANDROID</h3> <br> Gracias por redimir tu premio <br>'+
     'Descarga la app con este link desde tu celular <br><br> ' +
     '<center><a style="color:blue" href="https://bit.ly/30jftBh"> https://bit.ly/30jftBh </a><br><br>'+
 		' Ingresa el siguiente PIN para elegir tu juego: <br> <br> <label style="text-align:center; padding: 7px; background-color:blue; color: #ffffff !important; font-size: 20px; width: 100px; ">'+aleatorio+'</label> </center> ',
@@ -212,7 +216,7 @@ function mensaje2() {
   swal.fire({
 
 		html:'<h3 style="color:blue">PINES DIGITALES - NETFLIX O SPOTIFY</h3> <br> Gracias por redimir tu premio <br><br>'+
-    'Descarga la app con este link desde tu celular',
+    'Enviaremos tu premio en un plazo máximo de 72 horas',
 		width: 700,
 		showConfirmButton: false,
 		showCancelButton: true,
