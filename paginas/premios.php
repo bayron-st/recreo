@@ -1,4 +1,4 @@
-<?php		
+<?php
 	session_name("tetra");
 	session_start();
 	if( isset($_SESSION["nombres"]) == true ){
@@ -7,6 +7,13 @@
 		$idParticipante = $_SESSION["idparticipante"];
 	}
 ?>
+<script src="jquery-3.3.1.min.js"></script>
+
+<link rel="stylesheet" href="assets/plugins/sweetAlert2/sweetalert2.min.css">
+<link rel="stylesheet" href="assets/plugins/animate.css/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla5publico.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -16,26 +23,26 @@
 <meta name="Description" content="Turismo" />
 <meta name="Keywords" content="RECREO" />
 <title>El Recreo es de Todos</title>
-<link rel="shortcut icon" href="../imagenes/icono.ico" /> 
+<link rel="shortcut icon" href="../imagenes/icono.ico" />
     <link rel="icon" type="image/gif" href="../imagenes/animated_favicon1.gif" />
 <title><fmt:message key="title"/></title>
         <meta charset="utf-8" />
         <meta name="Description" content="Sitio Web SyDes" />
-        <meta name="author" content="Jairo Buitrago" />                                   
+        <meta name="author" content="Jairo Buitrago" />
 
 <!-- InstanceEndEditable -->
  		<!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
-	
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>             
-		<script src="../assets/js/bootstrap.min.js"></script>
+
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+				<script src="../assets/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../assets/css/styles2.css" />
         <link href="../assets/css/bootstrap.css" rel="stylesheet">
-        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet"> 
+        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
         <link href="../assets/css/estilogeneralpublico.css"  rel="stylesheet" media="all">
-        
+
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 
@@ -53,98 +60,114 @@
 
             <div class="opcionMenu" >
             	<a href="inicio.php"><img src="../imagenes/boton_inicio.png" width="100%"  /></a>
-            </div> 
+            </div>
             <div class="opcionMenu" >
-          		<img src="../imagenes/barraVerticalEncabezado.png"   width="70%"/> 
-            </div> 
+          		<img src="../imagenes/barraVerticalEncabezado.png"   width="70%"/>
+            </div>
             <div class="opcionMenu" >
             	<a href="como.php"><img src="../imagenes/boton_como_participar.png" width="100%"/></a>
-            </div> 
+            </div>
 	  <!-- InstanceEndEditable -->
-      
-    </div>      
+
+    </div>
       <div class="headerCentro">
       	<img src="../imagenes/logo.png" width="800%" alt="logo" />
-      </div>   
+      </div>
       <div class="headerDerecha" align="left">
 	  <!-- InstanceBeginEditable name="EditRegion5" -->
-            
-            
-            
+
+
+
             <div class="opcionMenu" >
             	<a href="juego.php"><img src="../imagenes/boton_juego.png" width="100%" /></a>
-            </div> 
+            </div>
             <div class="opcionMenu" >
-          		<img src="../imagenes/barraVerticalEncabezado.png"   width="70%"/> 
-            </div> 
+          		<img src="../imagenes/barraVerticalEncabezado.png"   width="70%"/>
+            </div>
             <div class="opcionMenu" >
             	<a href="premios.php"><img src="../imagenes/boton_premios_roll_over.png" width="100%"/></a>
-            </div> 
+            </div>
             <div class="opcionMenu" >
 	          	<img src="../imagenes/barraVerticalEncabezado.png"  width="70%" />
-            </div> 
+            </div>
             <div class="opcionMenu" >
-            	<a href="perfil.php"><img src="../imagenes/boton_usuario.png" width="75%"/></a> 
-            </div> 
-            <div style="color:#039"; font-size: 5vw;"> 
-                <?php echo $nombreUsuario; 	?>
-            </div>   
+            	<a href="perfil.php"><img src="../imagenes/boton_usuario.png" width="75%"/></a>
+            </div>
+            <div style="color:#039"; font-size: "5vw;">
+                <?php
+                  if (isset($nombreUsuario)) {
+                    echo $nombreUsuario;
+                  } 
+                ?>
+            </div>
             <div class="opcionMenu" >
 	          	<img src="../imagenes/barraVerticalEncabezado.png"  width="70%" />
-            </div> 
-            <div class="opcionMenu" >            	        
+            </div>
+            <div class="opcionMenu" >
 	            <a href="salirLoginParticipante.php"><img src="../imagenes/cerrar_session.png" width="50%" title="Salir"/></a>
-            </div> 
+            </div>
 	  <!-- InstanceEndEditable -->
-      
+
       </div>
   </div>
   <div class="contentido">
   	<!-- InstanceBeginEditable name="EditRegion3" -->
-    
-      <div class="recuadroBlancoDos" align="center">  	
+
+      <div class="recuadroBlancoDos" align="center">
 	      <br>
-          <div class="recuadroBlanco" align="center">    	
-          		<img src="../imagenes/texto_1_premios.png" width="10%" />	
-          </div>  	
-          <div class="recuadroAzul" align="center">   
+          <div class="recuadroBlanco" align="center">
+          		<img src="../imagenes/texto_1_premios.png" width="10%" />
+          </div>
+          <div class="recuadroAzul" align="center">
               <div class="contentidoTercioUno" align="right">
                     <img src="../imagenes/texto_2_premios.png" width="100%" />
                     <img src="../imagenes/premios-playstation4.jpg" width="100%" />
                     <img src="../imagenes/texto_5_premios.png" width="100%" />
-                    <img src="../imagenes/boton_premios_uno.png" width="100%" />
-              </div>  
-              <div class="contentidoTercioDos"> 
+										<img src="../imagenes/boton_premios_dos.png" width="100%" />
+              </div>
+              <div class="contentidoTercioDos">
                     <img src="../imagenes/texto_3_premios.png" width="100%"  />
                     <img src="../imagenes/premios-netflix_spotify.jpg" width="100%" />
                     <img src="../imagenes/texto_6_premios.png" width="100%" />
-                    <img src="../imagenes/boton_premios_dos.png" width="100%" />
-              </div>  
-              <div class="contentidoTercioTres"> 
+                  <!--  <img src="../imagenes/boton_premios_dos.png" width="100%" /> -->
+
+										<button type="button" class="btn btn-small btn-primary" onClick="mensaje2()">REDIMIR <BR>PREMIOS</button>
+										<button type="button" class="btn btn-small btn-primary disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+										<button type="button" class="btn btn-small  btn-primary disabled" disabled>GANAR CREDITOS <BR>ADICIONALES</button>
+
+
+              </div>
+              <div class="contentidoTercioTres">
                     <img src="../imagenes/texto_4_premios.png" width="100%"  />
                     <img src="../imagenes/premios-juegos_celular.jpg" width="100%" />
                     <img src="../imagenes/texto_7_premios.png" width="100%" />
-                    <img src="../imagenes/boton_premios_tres.png" width="100%" />
-              </div>  	
-          </div>  
-          	
-      </div>  
-          
-             
-           
-    
-	<!-- InstanceEndEditable -->        
+                    <!-- <img src="../imagenes/boton_premios_tres.png" width="100%" /> -->
+
+										<button type="button" class="btn btn-small btn-primary" onClick="mensaje()">REDIMIR <BR>PREMIOS</button>
+										<button type="button" class="btn btn-small btn-primary disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+	  							  <button type="button" class="btn btn-small  btn-primary disabled" disabled>GANAR CREDITOS <BR>ADICIONALES</button>
+
+
+              </div>
+          </div>
+
+      </div>
+
+
+
+
+	<!-- InstanceEndEditable -->
   </div>
-  
-  
+
+
   <div class="footer">
       <div class="recuadroAzulClaroDos">
       </div>
-      <div class="recuadroGris">      	
+      <div class="recuadroGris">
           <div class="recuadroGrisIzquierda">
           	<a href="http://elrecreoesdetodos.com" target="_blank"><img src="../imagenes/compraYRecibeDomicilio.png" width="50%" alt="domicilios" /></a>
-            	
-          </div>             
+
+          </div>
           <div class="recuadroGrisDerecha">
           	<img src="../imagenes/siguenos.png"  />
             <a href="http://facebook.com/tetrapakcolombia" target="_blank"><img src="../imagenes/facebook.png"  /></a>
@@ -155,11 +178,50 @@
           	<img src="../imagenes/barraVertical.png" />
             <a href="http://twitter.com/TetraPakAndina" target="_blank"><img src="../imagenes/twitter.png" /></a>
           	<img src="../imagenes/barraVertical.png" />
-            <a href="http://linkedin.com/company/tetra-pak/" target="_blank"><img src="../imagenes/in.png" /></a>                        
-          </div>   
-      </div>    
+            <a href="http://linkedin.com/company/tetra-pak/" target="_blank"><img src="../imagenes/in.png" /></a>
+          </div>
+      </div>
   </div>
 </div>
 </body>
 <!-- InstanceEnd --></html>
+<script type="text/javascript">
 
+function getRChar() {
+	return (Math.random() * 26 + 10 | 0).toString(36).toUpperCase();
+}
+
+function mensaje() {
+
+var aleatorio = getRChar() + getRChar() + Math.floor((Math.random() * 9999) * 4);
+
+  swal.fire({
+
+		html:'<h3 style="color:blue">JUEGOS PARA DISPOSITIVOS MOVILES </h3> <br> Gracias por redimir tu premio <br>'+
+    'Descarga la app con este link desde tu celular <br><br> ' +
+    '<center><a style="color:blue" href="https://bit.ly/30jftBh"> https://bit.ly/30jftBh </a><br><br>'+
+		' Ingresa el siguiente PIN para elegir tu juego: <br> <br> <label style="text-align:center; padding: 7px; background-color:blue; color: #ffffff !important; font-size: 20px; width: 100px; ">'+aleatorio+'</label> </center> ',
+		width: 700,
+		showConfirmButton: false,
+		showCancelButton: true,
+		cancelButtonText: "CERRAR",
+
+  });
+}
+
+function mensaje2() {
+  swal.fire({
+
+		html:'<h3 style="color:blue">PINES DIGITALES - NETFLIX O SPOTIFY</h3> <br> Gracias por redimir tu premio <br><br>'+
+    'Descarga la app con este link desde tu celular',
+		width: 700,
+		showConfirmButton: false,
+		showCancelButton: true,
+		cancelButtonText: "CERRAR",
+
+  });
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
