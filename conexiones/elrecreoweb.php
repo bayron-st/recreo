@@ -3,8 +3,10 @@
 # HTTP="true"
 $hostname_elrecreoweb = "localhost";
 $database_elrecreoweb = "elrecqcg_informacion";
-$username_elrecreoweb = "elrecqcg_admin";
-$password_elrecreoweb = "7?0U4O7$9%^FvKzV";
+// $username_elrecreoweb = "elrecqcg_admin";
+$username_elrecreoweb = "root";
+// $password_elrecreoweb = "7?0U4O7$9%^FvKzV";
+$password_elrecreoweb = "";
 
 
 //$elrecqcgWeb = mysql_pconnect($hostname_elrecreoweb, $username_elrecreoweb, $password_elrecreoweb) or trigger_error(mysql_error(),E_USER_ERROR); 
