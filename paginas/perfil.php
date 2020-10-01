@@ -18,13 +18,69 @@
 			$Recordset1 = mysqli_query($connElrecqcgWeb, $query_Recordset1) or die(mysql_error());
 			if($row = mysqli_fetch_array($Recordset1)){
 				$nombre = $row[NOMBRES] . " " . $row[APELLIDOS];
-				$telefono = $row[TELEFONO] ;
+				$telefono = 0 + $row[TELEFONO] ;
 			}else{
 				
 			}
 			mysqli_close($enlace);
 	}
 	
+	$creditosCompras = 0;
+	if (!empty($idParticipante) && $idParticipante!='' ){	
+	
+			$query_Recordset1 = "SELECT SUM(CANTIDAD) from CREDITOS where ID_PARTICIPANTE = " . $idParticipante." and TIPO = 'FACTURA'";
+			$Recordset1 = mysqli_query($connElrecqcgWeb, $query_Recordset1) or die(mysql_error());
+			if($row = mysqli_fetch_array($Recordset1)){
+				$creditosCompras = 0 + $row[0];
+			}else{
+				
+			}
+			mysqli_close($enlace);
+	}
+	
+	$creditosJuegos = 0;
+	if (!empty($idParticipante) && $idParticipante!='' ){	
+	
+			$query_Recordset1 = "SELECT SUM(CANTIDAD) from CREDITOS where ID_PARTICIPANTE = " . $idParticipante." and TIPO = 'JUEGO'";
+			$Recordset1 = mysqli_query($connElrecqcgWeb, $query_Recordset1) or die(mysql_error());
+			if($row = mysqli_fetch_array($Recordset1)){
+				$creditosJuegos = 0 + $row[0];
+			}else{
+				
+			}
+			mysqli_close($enlace);
+	}
+	
+	$redimidosNetfix = 0;
+	if (!empty($idParticipante) && $idParticipante!='' ){	
+	
+			$query_Recordset1 = "SELECT SUM(CANTIDAD) from CANJES where ID_PARTICIPANTE = " . $idParticipante." and ID_CODIGO IS NULL";
+			$Recordset1 = mysqli_query($connElrecqcgWeb, $query_Recordset1) or die(mysql_error());
+			if($row = mysqli_fetch_array($Recordset1)){
+				$redimidosNetfix = 0 + $row[0];
+			}else{
+				
+			}
+			mysqli_close($enlace);
+	}
+	
+?>
+
+<?php	
+	$redimidosCelular = 0;
+	if (!empty($idParticipante) && $idParticipante!='' ){	
+	
+			$query_Recordset1 = "SELECT SUM(CANTIDAD) from CANJES where ID_PARTICIPANTE = " . $idParticipante." and ID_CODIGO IS NOT NULL";
+			$Recordset1 = mysqli_query($connElrecqcgWeb, $query_Recordset1) or die(mysql_error());
+			if($row = mysqli_fetch_array($Recordset1)){
+				$redimidosCelular = 0 + $row[0];
+			}else{
+				
+			}
+			mysqli_close($enlace);
+	}
+	
+	$creditosDisponibles = $creditosCompras + $creditosJuegos - $redimidosNetfix - $redimidosCelular;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -156,19 +212,60 @@
                     </div>
                  </div>
               </div>  
-              <div class="contentidoDerecha">  
-                  <div class="recuadroBlanco">
-                    <div class="recuadroBlancoTres">
-                        <img src="../imagenes/texto_3_perfil.png" width="80%"  />
+              <div class="contentidoDerecha" align="left">  
+                  <div class="contentidoDerechaSeccion" align="center">
+                  
+                    <br>
+                    <div class="contentidoDerechaSA">
+                        <img src="../imagenes/texto_3_perfil.png" width="35%"  />
                     </div> 
-                    <div class="recuadroBlancoTres">
-                        <img src="../imagenes/imagen_compras.png" width="80%"  />
-                        <img src="../imagenes/imagen_reto_mental.png" width="80%"  />
+                    
+                    <div class="contentidoDerechaSA">
+                        <table >
+                          <tr>
+                            <td><img src="../imagenes/compras_registradas_a.png" width="100%"  /></td>
+                            <td> <b style="color:#033F88";><?php 	echo $creditosCompras.' Creditos'; ?></b> </td>
+                            <td><img src="../imagenes/compras_registradas_b.png" width="100%"  /></td>                            
+                            <td align="center" style="background-color: #033F88;" ><img src="../imagenes/creditos_disponibles.png" width="100%"  /></td>
+                          </tr>
+                          <tr>
+                            <td><img src="../imagenes/reto_mental_a.png" width="100%"  /></td>
+                            <td><b style="color:#033F88";> <?php 	echo $creditosJuegos.' Creditos'; ?> </b> </td>
+                            <td><img src="../imagenes/reto_mental_b.png" width="100%"  /></td>                            
+                            <td align="center" style="background-color: #033F88;"> <b style="color:#FFF";><?php 	echo $creditosDisponibles; ?> <img src="../imagenes/creditos_disponibles_b.png" width="40%"  /></td>
+                          </tr>
+                        </table>
                     </div> 
-                        <img src="../imagenes/imagen_creditos_disponibles.png" width="80%"  />
-                        <img src="../imagenes/texto_4_perfil.png" width="80%"  />
-                        <img src="../imagenes/imagen_compras.png" width="80%"  />
-                        <img src="../imagenes/imagen_reto_mental.png" width="80%"  />
+                    
+                    <br>
+                    <br>
+                        
+                    <div class="contentidoDerechaSA">
+                        <img src="../imagenes/texto_4_perfil.png" width="35%"  />
+                    </div> 
+                    
+                    <div class="contentidoDerechaSA">
+                        <table >
+                          <tr>
+                            <td><img src="../imagenes/pin_netfix.png" width="100%"  /></td>
+                            <td> <b style="color:#033F88";><?php 	echo $redimidosNetfix.' Creditos'; ?> </b>  </td>
+                            <td><img src="../imagenes/imagen_creditos_gris.png" width="100%"  /></td>
+                          </tr>
+                          <tr>
+                            <td><img src="../imagenes/juego_celular.png" width="100%"  /></td>
+                            <td> <b style="color:#033F88";><?php 	echo $redimidosCelular.' Creditos'; ?> </b> </td>
+                            <td><img src="../imagenes/imagen_creditos_gris.png" width="100%"  /></td>
+                          </tr>
+                        </table>
+                    </div> 
+                    
+                    <br>
+                    <div class="contentidoDerechaSA">
+                        <img src="../imagenes/texto_6_perfil.png" width="55%"  />
+                    </div> 
+                    
+                    <br>
+                    
                   </div>    
                 <br>    		    	          	
               </div> 
