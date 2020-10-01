@@ -94,7 +94,11 @@
             	<a href="perfil.php"><img src="../imagenes/boton_usuario.png" width="75%"/></a>
             </div>
             <div style="color:#039"; font-size: "5vw;">
-                <?php echo $nombreUsuario; 	?>
+                <?php
+                  if (isset($nombreUsuario)) {
+                    echo $nombreUsuario;
+                  } 
+                ?>
             </div>
             <div class="opcionMenu" >
 	          	<img src="../imagenes/barraVerticalEncabezado.png"  width="70%" />
