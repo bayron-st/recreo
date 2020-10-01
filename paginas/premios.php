@@ -123,29 +123,28 @@
                     <img src="../imagenes/texto_2_premios.png" width="100%" />
                     <img src="../imagenes/premios-playstation4.jpg" width="100%" />
                     <img src="../imagenes/texto_5_premios.png" width="100%" />
-										<img src="../imagenes/boton_premios_dos.png" width="100%" />
+										<!-- <img src="../imagenes/boton_premios_dos.png" width="100%" /> -->
+                    <button type="button" class="btn btn-small disabled" disabled="disabled">REDIMIR <BR>PREMIOS</button>
+										<button type="button" class="btn btn-small disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+										<button type="button" class="btn btn-small disabled" disabled="disabled">GANAR CREDITOS <BR>ADICIONALES</button>
               </div>
               <div class="contentidoTercioDos">
                     <img src="../imagenes/texto_3_premios.png" width="100%"  />
                     <img src="../imagenes/premios-netflix_spotify.jpg" width="100%" />
                     <img src="../imagenes/texto_6_premios.png" width="100%" />
                   <!--  <img src="../imagenes/boton_premios_dos.png" width="100%" /> -->
-
 										<button type="button" class="btn btn-small btn-primary" onClick="mensaje2()">REDIMIR <BR>PREMIOS</button>
-										<button type="button" class="btn btn-small btn-primary disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
-										<button type="button" class="btn btn-small  btn-primary disabled" disabled>GANAR CREDITOS <BR>ADICIONALES</button>
-
-
+										<button type="button" class="btn btn-small disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+										<button type="button" class="btn btn-small disabled" disabled="disabled">GANAR CREDITOS <BR>ADICIONALES</button>
               </div>
               <div class="contentidoTercioTres">
                     <img src="../imagenes/texto_4_premios.png" width="100%"  />
                     <img src="../imagenes/premios-juegos_celular.jpg" width="100%" />
                     <img src="../imagenes/texto_7_premios.png" width="100%" />
                     <!-- <img src="../imagenes/boton_premios_tres.png" width="100%" /> -->
-
 										<button type="button" class="btn btn-small btn-primary" onClick="mensaje()">REDIMIR <BR>PREMIOS</button>
-										<button type="button" class="btn btn-small btn-primary disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
-	  							  <button type="button" class="btn btn-small  btn-primary disabled" disabled>GANAR CREDITOS <BR>ADICIONALES</button>
+										<button type="button" class="btn btn-small disabled" disabled="disabled">REGISTRAR<BR>COMPRAS  <i class="fa fa-whatsapp" style="font-size:16px;color:white"></i></button>
+	  							  <button type="button" class="btn btn-small disabled" disabled="disabled">GANAR CREDITOS <BR>ADICIONALES</button>
 
 
               </div>
