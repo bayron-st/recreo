@@ -22,7 +22,7 @@
         <meta charset="utf-8" />
         <meta name="Description" content="Sitio Web SyDes" />
         <meta name="author" content="Jairo Buitrago" />                                   
-
+        <link rel="stylesheet" href="../assets/css/styles-game.css">
 <!-- InstanceEndEditable -->
  		<!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -87,7 +87,11 @@
             	<a href="perfil.php"><img src="../imagenes/boton_usuario.png" width="75%"/></a> 
             </div> 
             <div style="color:#039"; font-size: 5vw;"> 
-                <?php echo $nombreUsuario; 	?>
+              <?php 
+                if (isset($nombreUsuario)) {
+                  echo $nombreUsuario;
+                }
+              ?>
             </div>   
             <div class="opcionMenu" >
 	          	<img src="../imagenes/barraVerticalEncabezado.png"  width="70%" />
@@ -124,9 +128,85 @@
           <div class="contentidoDerecha">   
               </br>        		
               <div class="recuadroBlanco">
-              		<img src="../imagenes/juego_prueba.png" width="60%"  />
+              		<!-- <img src="../imagenes/juego_prueba.png" width="60%"  /> -->
+                <section class="memory-game">
+                  <div class="memory-card" data-framework="envase_2">
+                    <img class="front-face" src="../assets/img/game/envase_2.jpg" alt="envase_2" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_2">
+                    <img class="front-face" src="../assets/img/game/envase_2.jpg" alt="envase_2" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_3">
+                    <img class="front-face" src="../assets/img/game/envase_3.jpg" alt="envase_3" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_3">
+                    <img class="front-face" src="../assets/img/game/envase_3.jpg" alt="envase_3" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_4">
+                    <img class="front-face" src="../assets/img/game/envase_4.jpg" alt="envase_4" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_4">
+                    <img class="front-face" src="../assets/img/game/envase_4.jpg" alt="envase_4" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_5">
+                    <img class="front-face" src="../assets/img/game/envase_5.jpg" alt="envase_5" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_5">
+                    <img class="front-face" src="../assets/img/game/envase_5.jpg" alt="envase_5" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_6">
+                    <img class="front-face" src="../assets/img/game/envase_6.jpg" alt="envase_6" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_6">
+                    <img class="front-face" src="../assets/img/game/envase_6.jpg" alt="envase_6" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_7">
+                    <img class="front-face" src="../assets/img/game/envase_7.jpg" alt="envase_7" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_7">
+                    <img class="front-face" src="../assets/img/game/envase_7.jpg" alt="envase_7" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_8">
+                    <img class="front-face" src="../assets/img/game/envase_8.jpg" alt="envase_8" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_8">
+                    <img class="front-face" src="../assets/img/game/envase_8.jpg" alt="envase_8" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                  <div class="memory-card" data-framework="envase_9">
+                    <img class="front-face" src="../assets/img/game/envase_9.jpg" alt="envase_9" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+                  <div class="memory-card" data-framework="envase_9">
+                    <img class="front-face" src="../assets/img/game/envase_9.jpg" alt="envase_9" />
+                    <img class="back-face" src="../assets/img/game/pregunta.png" alt="JS Badge" />
+                  </div>
+
+                </section>
               </div>                
-              <br />		    	          	
+              <br />
+              <center><input class="btn btn-primary" type="button" value="Volver a jugar" onClick="location.reload()"></center>
+              <br>
           </div>     
 	<!-- InstanceEndEditable -->        
   </div>
@@ -155,6 +235,9 @@
       </div>    
   </div>
 </div>
+
+
+<script src="../assets/js/scripts-game.js"></script>
 </body>
 <!-- InstanceEnd --></html>
 

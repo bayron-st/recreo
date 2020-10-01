@@ -13,10 +13,12 @@
 <?php
 // esta archivo insertara los datos del formulario a la base de datos
 	$errorValidacion = "";
-	$key = $_POST['g-recaptcha-response'];
-	$pais = $_POST['pais'];
-	$identificacion = $_POST['identificacion'];
-	$telefono = $_POST['telefono'];
+	if(isset($_POST['g-recaptcha-response'])){
+		$key = $_POST['g-recaptcha-response'];
+		$pais = $_POST['pais'];
+		$identificacion = $_POST['identificacion'];
+		$telefono = $_POST['telefono'];
+	} 
 	
 	if (!empty($identificacion) && $identificacion!='' && !empty($telefono) && $telefono!=''){	
 		if (!empty($key) && $key!=''){	
@@ -64,7 +66,7 @@
 	$reCaptcha = new ReCaptcha($secret);
 	
 	// Was there a reCAPTCHA response?
-	if ($_POST["g-recaptcha-response"]) {
+	if (isset($_POST["g-recaptcha-response"])) {
 		$resp = $reCaptcha->verifyResponse(
 			$_SERVER["REMOTE_ADDR"],
 			$_POST["g-recaptcha-response"]
